@@ -30,11 +30,14 @@ import com.r2s.java_backend_03.model.User;
 import com.r2s.java_backend_03.model.response.SuccessResponse;
 import com.r2s.java_backend_03.service.UserService;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(path = "/users")
 @RequiredArgsConstructor
+@Tag(name = "users", description = "api for controller of user")
 public class UserController {
 
 	private final UserService userService;

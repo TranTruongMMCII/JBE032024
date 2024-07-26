@@ -14,11 +14,11 @@ public class UserValidator {
 			throw new ValidationException("NotNull.user", "User is required!");
 		}
 
-		if (!StringUtils.isEmpty(user.getName()) && user.getName().isBlank()) {
+		if (StringUtils.isEmpty(user.getName()) || user.getName().isBlank()) {
 			throw new ValidationException("NotBlank.user.name", "User.Name is not blank!");
 		}
 
-		if (!StringUtils.isEmpty(user.getEmail()) && user.getEmail().isBlank()) {
+		if (StringUtils.isEmpty(user.getEmail()) || user.getEmail().isBlank()) {
 			throw new ValidationException("NotBlank.user.email", "User.Email is not blank!");
 		}
 	}

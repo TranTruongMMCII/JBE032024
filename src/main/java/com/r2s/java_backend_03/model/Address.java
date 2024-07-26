@@ -1,5 +1,7 @@
 package com.r2s.java_backend_03.model;
 
+import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,6 +19,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@Schema(hidden = true)
 public class Address {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
